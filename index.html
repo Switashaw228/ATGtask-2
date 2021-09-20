@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCROLLING WEB</title>
+</head>
+
+
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- FontAwesome style-->
+<script src="https://kit.fontawesome.com/9fb091c163.js" crossorigin="anonymous"></script>
+<!-- Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+<Style>
+    /* mobileView */
+    .carousel-inner {
+        height:100vh;
+    }
+
+    .background1,
+    .background2,
+    .background3,
+    .background4,
+    .background5,
+    .background6,
+    .background7 {
+        height: 350px;
+    }
+
+    .text-lebel1,
+    .text-lebel2,
+    .text-lebel3,
+    .text-lebel4,
+    .text-lebel5,
+    .text-lebel6,
+    .text-lebel7 {
+        height: 500px;
+        z-index: 10;
+    }
+
+    #fitness {
+        position: absolute;
+        clip: rect(0px, 400px, 300px, 0px);
+    }
+
+    #domino1 {
+        position: absolute;
+        top: 24%;
+        clip: rect(0px, 400px, 100px, 0px);
+    }
+
+    #domino7 {
+        position: absolute;
+        top: 29%;
+        clip: rect(0px, 400px, 100px, 0px);
+        left: 50%;
+    }
+
+    #domino4 {
+        position: absolute;
+        top: -10%;
+        left: 70%;
+    }
+
+
+    /* #domino6 {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+} */
+
+    #karvan2 {
+        position: absolute;
+        top: 23%;
+        clip: rect(0px, 400px, 150px, 0px);
+        height: 300px;
+    }
+
+    #karvan3 {
+        position: absolute;
+        top: -10%;
+    }
+
+    #karvan1 {
+        position: absolute;
+        top:23.5%;
+        left: 45%;
+        clip: rect(0px, 400px, 100px, 0px);
+    }
+
+    #karvan5 {
+        width: 180px !important;
+        position: absolute;
+        top: 10%;
+        left: 80%;
+    }
+
+    #karvan4 {
+        width: 140px !important;
+        position: absolute;
+        left: 50%;
+    }
+
+    .background1 {
+        background-color: rgb(211, 202, 202);
+    }
+
+    .text-lebel1 {
+        background-color: rgb(89, 49, 153);
+    }
+
+    .background2 {
+        background-color: rgb(35, 15, 121);
+    }
+
+    .text-lebel2 {
+        background-color: rgb(81, 52, 206);
+    }
+
+    .background3 {
+        background-color: rgb(10, 10, 68);
+    }
+
+    .text-lebel3 {
+        background-color: rgb(7, 7, 56);
+    }
+
+    .background4 {
+        background-color: black;
+    }
+
+    .text-lebel4 {
+        background-color: rgb(33, 43, 58);
+    }
+
+    .background5 {
+        background-color: rgb(52, 193, 228);
+    }
+
+    .text-lebel5 {
+        background-color: rgb(26, 76, 184);
+    }
+
+    .background6 {
+        background-color: rgb(211, 202, 202);
+    }
+
+    .text-lebel6 {
+        background-color: rgb(21, 56, 133);
+    }
+
+    .background7 {
+        background-color: rgb(53, 173, 28);
+    }
+
+    .text-lebel7 {
+        background-color: rgb(45, 136, 33);
+    }
+
+    p,
+    h1 {
+        color: white;
+    }
+
+    .case {
+        margin-top: 40px !important;
+    }
+
+    button {
+        border-radius: 20px !important;
+        background-color: red !important;
+        margin-top: -4% !important;
+
+
+    }
+
+    .carousel-indicators button {
+        border-radius: 50% !important;
+        height: 15px !important;
+        width: 15px !important;
+        /* margin-top: -2%!important; */
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    /* @media only screen and (max-width: 1200px) {
+
+        .mobile-view {
+   display: block;
+  }
+        svg {
+            display: none;
+        }
+
+        .title {
+            display: none;
+        }
+        .box {
+            display: none;
+        }
+        #skip {
+            display: none;
+        }
+    } */
+
+    @media only screen and (max-width:1000px) {
+        .mobile-view {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+
+    /* desktopView */
+
+    .row {
+        padding-left: 10px;
+
+    }
+
+    #left {
+        background-color: rgb(89, 49, 153);
+        height: 130vh;
+        transition: ease 0.6s;
+    }
+
+    #right {
+        background-color: rgb(211, 202, 202);
+        height: 130vh;
+        position: relative;
+        text-align: center;
+        padding: 70px 40px;
+        z-index: -999;
+        transition: ease 0.6s;
+    }
+
+    #element1 img {
+        padding: 30px 20px;
+    }
+
+    .head {
+        margin-top: 60px;
+        position: relative;
+        /* border: 2px rgb(15, 14, 14) solid; */
+
+    }
+
+    .circle {
+        background-color: aquamarine;
+    }
+
+    svg {
+        background-color: rgb(89, 49, 153);
+        position: absolute;
+        width: 250px;
+        left: 30%;
+        border-radius: 50%;
+        position: fixed;
+        transition: ease 0.6s;
+
+    }
+
+    .title {
+        position: absolute;
+        /* left: 40%; */
+        margin-top: 90px;
+        margin-left: 120px;
+        width: 400px;
+        color: white;
+        position: fixed;
+       
+    }
+
+    #title1 h1 {
+        font-size: 45px;
+        float: right;
+    }
+
+    #title1 p {
+        float: right;
+        margin-top: -10px;
+    }
+
+    #title1 {
+        display: block;
+        /* display: none; */
+
+    }
+
+    #title2 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 48%;
+        /* margin-top: -15px; */
+
+    }
+
+    #title2 h2 {
+        font-size: 35px;
+        margin-top: -20px;
+
+    }
+
+    #title2 #p2 {
+        float: right;
+        /* margin-top: -10px; */
+    }
+
+    #title3 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 63%;
+        /* margin-top: -10px; */
+
+    }
+
+    #title3 h2 {
+        font-size: 70px;
+        margin-top: -30px;
+        margin-bottom: -10px;
+
+    }
+
+    #title3 #p3 {
+        float: right;
+        /* margin-top: -10px; */
+    }
+
+    #title4 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 48%;
+        /* margin-top: -15px; */
+
+    }
+
+    #title4 h2 {
+        font-size: 35px;
+        margin-top: -20px;
+
+    }
+
+    #title4 #p4 {
+        float: right;
+        /* margin-top: -10px; */
+    }
+
+    #title5 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 53%;
+        /* right: -10%; */
+        margin-top: -10px;
+        width: 250px;
+
+    }
+
+    #title5 h2 {
+        font-size: 35px;
+        margin-top: -20px;
+        margin-bottom: 0px;
+
+    }
+
+    #title5 #p5 {
+        float: right;
+        /* margin-top: -10px; */
+    }
+
+
+    #title6 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 55%;
+        /* right: -10%; */
+        margin-top: -20px;
+        width: 250px;
+
+    }
+
+    #title6 h2 {
+        font-size: 35px;
+        margin-top: -20px;
+        margin-bottom: 0px;
+
+    }
+
+    #title6 #p6 {
+        float: right;
+        padding-right: 30px;
+        /* margin-top: -10px; */
+    }
+
+    #title7 {
+        position: absolute;
+        display: none;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        left: 65%;
+        /* margin-top: -15px; */
+
+    }
+
+    #title7 h2 {
+        font-size: 35px;
+        margin-top: -20px;
+
+    }
+
+    #title7 #p7 {
+        float: right;
+        /* margin-top: -10px; */
+    }
+
+    #element1 {
+        display: block;
+        /* display: none; */
+    }
+
+    #element2 {
+        display: none;
+
+    }
+
+    #element3 {
+        display: none;
+
+    }
+
+    #element4 {
+        display: none;
+        position: relative;
+
+    }
+
+    #element5 {
+        display: none;
+        position: relative;
+
+    }
+
+    #element6 {
+        display: none;
+        /* position: relative; */
+
+    }
+
+    #element7 {
+        display: none;
+        position: relative;
+
+    }
+
+    #element1 #d1 {
+        border-radius: 60px;
+    }
+
+    #element1 #d2 {
+        border-radius: 60px;
+    }
+
+    #element2 #img1 {
+        position: absolute;
+        /* margin-top:90px; */
+        padding: 220px 20px 0px;
+        left: 20%;
+
+    }
+
+    #element2 #img2 {
+        position: absolute;
+        margin-top: -80px;
+        padding-left: 20px;
+        left: 60%;
+        float: right;
+        /* top: 10%; */
+        width: 220px;
+
+    }
+
+    #element3 #img1 {
+        position: absolute;
+        /* margin-top:90px; */
+        padding: 50px 20px 0px;
+        left: 20%;
+        /* width: 200px; */
+        border-radius: 50px;
+
+    }
+
+    #element3 #img2 {
+        position: absolute;
+        margin-top: -70px;
+        padding-left: 20px;
+        left: 65%;
+        float: right;
+        /* top: 10%; */
+        width: 200px;
+        border-radius: 20px;
+
+    }
+
+    #element4 #a1 {
+        position: absolute;
+        margin-top: -90px;
+        padding-left: 20px;
+        right: 80%;
+        width: 200px;
+
+    }
+
+    #element4 #a2 {
+        position: absolute;
+        margin-top: 300px;
+        /* border-radius: 20px; */
+        left: 6%;
+        width: 200px;
+    }
+
+    #element4 #a3 {
+        position: absolute;
+        border-radius: 30px;
+        padding-left: 20px;
+        left: 50%;
+        width: 200px;
+
+    }
+
+    #element4 #a4 {
+        position: absolute;
+        border-radius: 30px;
+        padding-left: 20px;
+        left: 77%;
+        margin-top: -170px;
+
+
+    }
+
+    #element4 #a5 {
+        position: absolute;
+        margin-top: 400px;
+        right: -8%;
+    }
+
+    #element5 #b1 {
+        position: absolute;
+        left: 10%;
+        margin-top: -200px;
+    }
+
+    #element5 #b2 {
+        position: absolute;
+        left: 45%;
+        margin-top: -100px;
+    }
+
+    #element5 #b3 {
+        position: absolute;
+        left: 75%;
+        margin-top: 50px;
+    }
+
+    #element5 #b4 {
+        position: absolute;
+        left: 10%;
+        margin-top: 260px;
+    }
+
+    #element5 #b5 {
+        position: absolute;
+        left: 40%;
+        margin-top: 280px;
+    }
+
+    #element6 {
+        position: absolute;
+        margin-top: -50px;
+        left: -4%;
+
+
+    }
+
+    #element7 #c2 {
+        position: absolute;
+        margin-top: 160px;
+        /* padding-right: -80px; */
+        left: 60%;
+
+    }
+
+    #element7 #c1 {
+        position: absolute;
+        border-radius: 30px;
+        margin-top: 200px;
+        /* margin-right: -30px; */
+        left: 24%;
+
+    }
+
+    #line1 {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #down1 {
+        margin-top: 40px;
+        font-size: 12px;
+        /* border: 2px rgb(15, 14, 14) solid; */
+        width: 400px;
+
+
+    }
+
+    #down1 #skip {
+        float: right;
+    }
+
+    .name {
+        position: fixed;
+        margin-top: 23%;
+        margin-left: 7%;
+        color: white;
+    }
+
+    #name2 {
+        display: none;
+    }
+
+    #name3 {
+        display: none;
+    }
+
+    #name4 {
+        display: none;
+    }
+
+    #name5 {
+        display: none;
+    }
+
+    #name6 {
+        display: none;
+        margin-top: -40px;
+    }
+
+    #name3 p {
+        /* display: none; */
+        font-size: 12px;
+        margin-top: -6px;
+    }
+
+    #name7 {
+        display: none;
+        font-size: 11px;
+        margin-top: -20px;
+
+    }
+
+    #name7 p {
+        font-size: 11px;
+        margin-top: -4px;
+
+    }
+
+    #name6 p {
+        font-size: 11px;
+        margin-top: -4px;
+
+    }
+
+    #name1 {
+        display: block;
+        /* display: none; */
+    }
+
+    .box {
+        margin-top: 200px;
+        margin-left: 7%;
+        position: fixed;
+    }
+
+    #box1 {
+        display: block;
+    }
+
+    #box2 {
+        display: none;
+    }
+
+    .page {
+        background-color: rgb(45, 136, 33);
+        background-color: rgb(53, 173, 28);
+    }
+    .animate{
+        animation-duration: 0.2s;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+    .mb{
+        position: fixed;
+        width: 45px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(32, 110, 226);
+        margin-top: 550px;
+        left: 95%;
+       
+    }
+    .msg-box{
+        margin-top: 10px;
+        width: 22px;
+        height:25px;
+        background-color: white;
+    }
+</Style>
+
+<body>
+    <div class="desktop">
+        <div class="row">
+            <div id="left" class=" col-5">
+                <section class="head">
+                    <div id="circle" class="circle">
+                        <svg version="1.1" id="transring" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="300px" y="300px" viewBox="0 0 414 414"
+                            style="enable-background:new 0 0 414 414; " xml:space="preserve">
+
+                            <path id="Transparent_Ring" class="transrg"
+                                style="opacity:0.4;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;enable-background:new"
+                                d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                    c-47.8,0-91-19.4-122.3-50.7"></path>
+
+                            <path id="Opaque_Ring" class="transrgwht" stroke-dasharray="0,1000"
+                                style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10; stroke-dasharray: 0, 1000;"
+                                d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                    c-47.8,0-91-19.4-122.3-50.7"></path>
+
+                            <g id="Dots1" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill1" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro1"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                                </g>
+                            </g>
+                            <g id="Dots2" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill2" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro2"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8">
+                                    </path>
+                                </g>
+                            </g>
+                            <g id="Dots3" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill3" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro3"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332">
+                                    </path>
+                                </g>
+                            </g>
+                            <g id="Dots4" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill4" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro4"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380">
+                                    </path>
+                                </g>
+                            </g>
+                            <g id="Dots5" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill5" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro5"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335">
+                                    </path>
+                                </g>
+                            </g>
+                            <g id="Dots6" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill6" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro6"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210">
+                                    </path>
+                                </g>
+                            </g>
+                            <g id="Dots7" class="dots-nav">
+                                <g>
+                                    <path class="dotsst dotsfill7" style="fill: rgb(0, 146, 255); opacity: 1;"
+                                        d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88">
+                                    </path>
+                                </g>
+                                <g>
+                                    <path class="dotsstro7"
+                                        style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                                        d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="title" class="animate__fadeInDown animate__animated" >
+                        <div id="title1" class="animate__fadeInDown animate__animated">
+                            <h1>25M+ Downloads</h1>
+                            <p>on appstore & google playstore</p>
+                        </div>
+                        <div id="title2" class="animate__fadeInDown animate__animated">
+                            <p>The Next Big</p>
+                            <h2>Blockchain</h2>
+                            <p id="p2">Resolution</p>
+                        </div>
+                        <div id="title3" class="animate__fadeInDown animate__animated">
+                            <p>powered by advanced</p>
+                            <h2><img src="nasa-mobile-app.png" width="185px" alt=""></h2>
+                            <p id="p3">algorithms</p>
+                        </div>
+                        <div id="title4" class="animate__fadeInDown animate__animated">
+                            <p>Redefining</p>
+                            <h2>UX Strategy</h2>
+                            <p id="p4">and UI design</p>
+                        </div>
+                        <div id="title5" class="animate__fadeInDown animate__animated">
+                            <p>Text Headline</p>
+                            <h2>Text Headline</h2>
+                            <p id="p5">Footer Headline</p>
+                        </div>
+                        <div id="title6" class="animate__fadeInDown animate__animated">
+                            <p>Developing ERP Solution for</p>
+                            <h2>Text Headline</h2>
+                            <p id="p6">in furniture industry</p>
+                        </div>
+                        <div id="title7" class="animate__fadeInDown animate__animated">
+                            <p>Biggest Classifieds</p>
+                            <h2>East Asia</h2>
+                            <p id="p7">Countries</p>
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <div class="box">
+                    <section id="box1">
+                        <img src="world-communication-awards-for-best-digital-experience.png" width="180px" alt="">
+                    </section>
+                    <section id="box2">
+                        <img src="mobile-app-of-the-year-by-entrepreneur.png" width="180px" alt="">
+                    </section>
+                </div>
+
+                <section class="name">
+                    <div id="name1" class="animate__fadeInDown animate__animated" >
+                        <h1>ABC 123</h1>
+                        <p id="line1">We are the best web developement company in the world</p>
+                        <div id="down1">
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+
+                    <div id="name2" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 234</h1>
+                        <p id="line1">We are the best web developement company in the world</p>
+                        <div id="down1">
+                            <p>Coming Soon</p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+
+                    <div id="name3" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 345</h1>
+                        <p id="line1">We are the best</p>
+                        <p>web developer company</p>
+                        <p>in the world</p>
+                        <div id="down1">
+                            <p>Coming Soon</p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+                    <div id="name4" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 456</h1>
+                        <p id="line1">We are the best web developement company in the world</p>
+                        <div id="down1">
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+                    <div id="name5" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 567</h1>
+                        <p id="line1">We are the best AR web developement company in the world</p>
+                        <div id="down1">
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+                    <div id="name6" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 678</h1>
+                        <p>Best since 2017</p>
+                        <p>We offer wide range of</p>
+                        <p>web developement and app development</p>
+                        <div id="down1">
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+                    <div id="name7" class="animate__fadeInDown animate__animated">
+                        <h1>ABC 23478</h1>
+                        <p>Best since 2017</p>
+                        <p>We offer wide range of</p>
+                        <p>web developement and app development</p>
+                        <div id="down1">
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+                            <p id="skip">S K I P</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div id="right" class="col-7" >
+                <div id="element1" >
+                    <img id="d1" class="animate__fadeInUp animate__animated" src="mobile1.png" width="250px" alt="">
+                    <img id="d2" class="animate__fadeInUp animate__animated" src="mobile2.png" width="250px" alt="">
+
+                </div>
+                <div id="element2">
+                    <img class="animate__fadeInUp animate__animated" id="img1" src="veme-blockchain-app-developed.png" width="250px" alt="">
+                    <img class="animate__fadeInDown animate__animated"  id="img2" src="veme-app-ui-design.png" width="250px" alt="">
+                </div>
+                <div id="element3">
+                    <img class="animate__fadeInUp animate__animated" id="img1" src="mobile5.jpg" width="250px" alt="">
+                    <img class="animate__fadeInDown animate__animated" id="img2" src="mobile6.jpg" width="250px" alt="">
+                </div>
+
+                <div id="element4">
+                    <img id="a1" class="animate__fadeInUp animate__animated" src="pizza.jpg" alt="" width="150px">
+                    <img id="a2" class="animate__fadeInUp animate__animated" src="domi-img1.png" alt="" width="150px">
+                    <img id="a3" class="animate__fadeIn animate__animated" src="ux-strategy-for-mobile-app-devlopment.png" alt="" width="150px">
+                    <img id="a4" class="animate__fadeInUp animate__animated"  src="dominos-bread.png" alt="" width="150px">
+                    <img id="a5" class="animate__fadeInDown animate__animated"  src="dominos-bread1.png" alt="" width="250px">
+                </div>
+
+                <div id="element5">
+                    <img id="b1"  class="animate__zoomIn animate__animated" src="karavan-social-networking-app-screen.png" width="200px" alt="">
+                    <img id="b2"  class="animate__zoomIn animate__animated"src="social-networking-app-case-study.png" width="200px" alt="">
+                    <img id="b3"  class="animate__zoomIn animate__animated"src="developers-for-social-media-app.png" width="200px" alt="">
+                    <img id="b4"  class="animate__zoomIn animate__animated"src="karavan_2.png" width="200px" alt="">
+                    <img id="b5"  class="animate__zoomIn animate__animated"src="karavan-social-networking-app-screen-2.png" width="200px" alt="">
+
+                </div>
+
+                <div id="element6">
+                    <img class="animate__fadeInUp animate__animated" src="erp-app-development-service.png" width="765px" alt="">
+                </div>
+                <div id="element7">
+                    <img id="c1" class="animate__fadeIn animate__animated" src="melltoo-img2.jpg" width="240px" alt="">
+                    <img id="c2" class="animate__fadeIn animate__animated" src="melltoo-img1.png" width="240px" alt="">
+                </div>
+
+            </div>
+
+<div class="mb">
+    <div class="msg-box">
+
+    </div>
+</div>
+
+
+
+        </div>
+        <!-- <div class="page2">
+            <h1>PAGE2</h1>
+          </div> -->
+    </div>
+
+    <section class="mobile-view">
+
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                    aria-label="Slide 7"></button>
+
+
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+
+                    <div class="d-flex background1" id="">
+
+                        <img src="nexgtv-entertainment-mobile-app-development.png" class="d-block w-50 mt-5" alt="..."
+                            style="height: 300px;">
+                        <img src="nexgtv-mobile-app-ui-design.png" class="d-block w-50" style="height: 300px;"
+                            alt="...">
+
+                    </div>
+                    <img src="world-communication-awards-for-best-digital-experience.png" class="d-block "
+                        style="height: 80px;width:300px;position: absolute;/* padding-bottom: 10%; */bottom: 55%;margin-left: 10px;">
+                    <div class="text-lebel1 p-5">
+                        <h1>ABC 123</h1>
+                        <p>This is sample text for ABC 123.This is sample text for ABC 123</p>
+                        <div class="case d-flex">
+
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="d-flex background2">
+
+                        <img src="veme-blockchain-app-developed.png" class="d-block w-50 mt-5" alt="..."
+                            style="height: 300px;">
+                        <img src="veme-app-ui-design.png" class="d-block w-50" style="height: 200px;" alt="...">
+                    </div>
+                    <div class="text-lebel2 p-3">
+                        <h1>ABC 1</h1>
+                        <p>This is complete text foe ABC 1</p>
+                        <div class="case d-flex">
+
+                            <p>CASE STUDY-</p>
+                            <button class="btn btn-primary mx-2">COMING SOON</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="d-flex background3">
+
+                        <img src="nasa-fitness-tracking-mobile-app.png" class="d-block w-50 mt-5" id="fitness" alt="..."
+                            style="height: 500px;">
+                        <img src="measure-total-body-weight-through-fitness-app.png" class="d-block "
+                            style="height: 300px; width: 150px; position:absolute; left: 50%; top: -10%" alt="...">
+                    </div>
+                    <div class="text-lebel3 p-3">
+                        <h1>ABC 2</h1>
+                        <p>This is complete text foe ABC 2</p>
+                        <div class="case d-flex">
+
+                            <p>CASE STUDY-</p>
+                            <button class="btn btn-primary mx-2" style="background-color: white!important; color: black!important;">COMING SOON</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="d-flex background4">
+
+                        <img src="domi-img1.png" class="d-block w-50 mt-5" id="domino1" alt="..."
+                            style="height: 300px;">
+                        <img src="pizza_box.png" class="d-block w-50" id="domino6" style="height: 200px;" alt="...">
+                        <img src="ux-strategy-for-mobile-app-devlopment.png" id="domino2" class="d-block w-50"
+                            style="height: 200px;" alt="...">
+                        <img src="dominos-bread.png" class="d-block w-50" id="domino3" style="height: 200px;" alt="...">
+                        <img src="dominos-masala.png" class="d-block w-50" id="domino4" style="height: 200px;"
+                            alt="...">
+                        <img src="dominos-bread1.png" class="d-block w-50" id="domino5" style="height: 200px;"
+                            alt="...">
+                        <img src="on-demand-app-development-company.png" class="d-block w-50" id="domino7"
+                            style="height: 200px;" alt="...">
+
+                    </div>
+                    <div class="text-lebel4 p-3">
+                        <h1>ABC 3</h1>
+                        <p>This is complete text foe ABC 3</p>
+                        <div class="case d-flex">
+
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="d-flex background5">
+
+                        <img src="karavan_2.png" class="d-block w-50" style="height: 200px;" id="karvan2" alt="...">
+                        <img src="karavan-social-networking-app-screen.png" class="d-block w-50" id="karvan3"
+                            style="height: 200px;" alt="...">
+                        <img src="karavan-social-networking-app-screen-2.png" class="d-block w-50 mt-5" id="karvan1"
+                            alt="..." style="height: 200px;">
+                        <img src="social-networking-app-case-study.png" class="d-block w-50" id="karvan4"
+                            style="height: 200px;" alt="...">
+                        <img src="developers-for-social-media-app.png" class="d-block w-50" id="karvan5"
+                            style="height: 200px;" alt="...">
+                    </div>
+                    <div class="text-lebel5 p-3">
+                        <h1>ABC 4</h1>
+                        <p>This is complete text foe ABC 4</p>
+                        <div class="case d-flex">
+
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+
+                    <div class="d-flex background6">
+
+                        <img src="erp-app-development-service.png" class="d-block w-100 mt-5" alt="..."
+                            style="height: 300px;">
+                        <!-- <img src="veme-app-ui-design.png" class="d-block w-50" style="height: 200px;" alt="..."> -->
+                    </div>
+                    <div class="text-lebel6 p-3">
+                        <h1>ABC 5</h1>
+                        <p>This is complete text foe ABC 5</p>
+                        <div class="case d-flex">
+
+                            <p>View case study <i class="fas fa-arrow-right"></i></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="d-flex background7 px-2">
+
+                        <img src="melltoo-img1.png" class="d-block w-50 mt-5" alt="..."
+                            style="height: 250px; width : 700px ;">
+                        <img src="melltoo-img2.png" class="d-block w-50" style="height: 290px; width : 700px ; position:absolute; left:55%; 
+                    top: 10%;" alt="...">
+                    </div>
+                    <img src="mobile-app-of-the-year-by-entrepreneur.png" class="d-block "
+                        style="height:100px;width: 250px;position:absolute; bottom: 55%;margin-left: 10px; z-index: 10;"
+                        alt="...">
+
+                    <div class="text-lebel7 p-5">
+                        <h1>XYZ 123</h1>
+                        <p>This is complete text for XYZ 123</p>
+                        <div class="case d-flex">
+
+                            <p>CASE STUDY-</p>
+                            <button class="btn btn-primary mx-2"
+                                style="background-color: white!important; color: green!important; ">COMING SOON</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ "
+        crossorigin="anonymous "></script>
+
+
+
+
+
+
+
+    <script>
+
+        var Opaque_Ring = document.getElementById("Opaque_Ring");
+        var Dots1 = document.getElementById("Dots1");
+        var Dots2 = document.getElementById("Dots2");
+
+        var left = document.getElementById("left");
+        var right = document.getElementById("right");
+        var circle = document.getElementById("circle");
+
+        var element1 = document.getElementById("element1");
+        var element2 = document.getElementById("element2");
+        var element3 = document.getElementById("element3");
+
+        var title1 = document.getElementById("title1");
+        var title2 = document.getElementById("title2");
+        var title3 = document.getElementById("title3");
+
+        var box1 = document.getElementById("box1");
+
+        var name1 = document.getElementById("name1");
+        var name2 = document.getElementById("name2");
+        var name3 = document.getElementById("name3");
+
+        var svg = document.querySelector("svg");
+
+
+
+
+
+
+        function change() {
+            if ((window.pageYOffset > 0) && (window.pageYOffset <= 10)) {
+                Opaque_Ring.style.strokeDasharray = "0,1000";
+                left.style.backgroundColor = "rgb(89, 49, 153)";
+                right.style.backgroundColor = "rgb(211, 202, 202)";
+                svg.style.backgroundColor = "rgb(89, 49, 153)";
+                element7.style.display = "none";
+                element2.style.display = "none";
+                element3.style.display = "none";
+                element4.style.display = "none";
+                element5.style.display = "none";
+                element6.style.display = "none";
+                element1.style.display = "block";
+                title7.style.display = "none";
+                title2.style.display = "none";
+                title3.style.display = "none";
+                title4.style.display = "none";
+                title5.style.display = "none";
+                title6.style.display = "none";
+                title1.style.display = "block";
+                box2.style.display = "none";
+                box1.style.display = "block";
+                name7.style.display = "none";
+                name2.style.display = "none";
+                name3.style.display = "none";
+                name4.style.display = "none";
+                name5.style.display = "none";
+                name6.style.display = "none";
+                name1.style.display = "block";
+
+            }
+
+            else {
+                window.addEventListener('scroll', change1);
+            }
+
+        }
+        window.addEventListener('scroll', change);
+
+
+
+
+        function change1() {
+
+
+            if ((window.pageYOffset > 10) && (window.pageYOffset <= 20)) {
+                Opaque_Ring.style.strokeDasharray = "130,1000";
+                left.style.backgroundColor = "rgb(81, 52, 206)";
+                right.style.backgroundColor = "rgb(35, 15, 121)";
+                svg.style.backgroundColor = "rgb(81, 52, 206)";
+                element1.style.display = "none";
+                element2.style.display = "block";
+                element3.style.display = "none";
+                element4.style.display = "none";
+                element5.style.display = "none";
+                element6.style.display = "none";
+                element7.style.display = "none";
+                title1.style.display = "none";
+                title3.style.display = "none";
+                title4.style.display = "none";
+                title5.style.display = "none";
+                title6.style.display = "none";
+                title7.style.display = "none";
+                title2.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "none";
+                name1.style.display = "none";
+                name3.style.display = "none";
+                name4.style.display = "none";
+                name5.style.display = "none";
+                name6.style.display = "none";
+                name7.style.display = "none";
+                name2.style.display = "block";
+            }
+            else {
+                window.addEventListener('scroll', change2);
+            }
+
+        }
+        window.addEventListener('scroll', change1);
+
+
+        function change2() {
+            if ((window.pageYOffset > 20) && (window.pageYOffset <= 30)) {
+                Opaque_Ring.style.strokeDasharray = "280,1000";
+                left.style.backgroundColor = "rgb(7, 7, 56)";
+                right.style.backgroundColor = "rgb(10, 10, 68)";
+                svg.style.backgroundColor = "rgb(7, 7, 56)";
+                element1.style.display = "none";
+                element2.style.display = "none";
+                element4.style.display = "none";
+                element5.style.display = "none";
+                element6.style.display = "none";
+                element7.style.display = "none";
+                element3.style.display = "block";
+                title1.style.display = "none";
+                title2.style.display = "none";
+                title4.style.display = "none";
+                title5.style.display = "none";
+                title5.style.display = "none";
+                title7.style.display = "none";
+                title3.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "none";
+                name1.style.display = "none";
+                name2.style.display = "none";
+                name4.style.display = "none";
+                name5.style.display = "none";
+                name6.style.display = "none";
+                name7.style.display = "none";
+                name3.style.display = "block";
+
+
+            }
+
+            else {
+                window.addEventListener('scroll', change3);
+            }
+
+        }
+        window.addEventListener('scroll', change3);
+        function change3() {
+            if ((window.pageYOffset > 30) && (window.pageYOffset <= 40)) {
+                Opaque_Ring.style.strokeDasharray = "410,1000";
+                left.style.backgroundColor = "rgb(33, 43, 58)";
+                right.style.backgroundColor = "black";
+                svg.style.backgroundColor = "rgb(33, 43, 58)";
+                element1.style.display = "none";
+                element2.style.display = "none";
+                element3.style.display = "none";
+                element5.style.display = "none";
+                element6.style.display = "none";
+                element7.style.display = "none";
+                element4.style.display = "block";
+                title1.style.display = "none";
+                title2.style.display = "none";
+                title3.style.display = "none";
+                title5.style.display = "none";
+                title6.style.display = "none";
+                title7.style.display = "none";
+                title4.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "none";
+                name1.style.display = "none";
+                name2.style.display = "none";
+                name3.style.display = "none";
+                name5.style.display = "none";
+                name6.style.display = "none";
+                name7.style.display = "none";
+                name4.style.display = "block";
+
+
+            }
+
+            else {
+                window.addEventListener('scroll', change4);
+            }
+
+        }
+        window.addEventListener('scroll', change3);
+
+
+
+
+        function change4() {
+            if ((window.pageYOffset > 40) && (window.pageYOffset <= 50)) {
+                Opaque_Ring.style.strokeDasharray = "540,1000";
+                left.style.backgroundColor = "rgb(26, 76, 184)";
+                right.style.backgroundColor = "rgb(52, 193, 228)";
+                svg.style.backgroundColor = "rgb(45, 96, 206)";
+                element1.style.display = "none";
+                element2.style.display = "none";
+                element3.style.display = "none";
+                element4.style.display = "none";
+                element6.style.display = "none";
+                element7.style.display = "none";
+                element5.style.display = "block";
+                title1.style.display = "none";
+                title2.style.display = "none";
+                title3.style.display = "none";
+                title4.style.display = "none";
+                title6.style.display = "none";
+                title7.style.display = "none";
+                title5.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "none";
+                name1.style.display = "none";
+                name2.style.display = "none";
+                name3.style.display = "none";
+                name4.style.display = "none";
+                name6.style.display = "none";
+                name7.style.display = "none";
+                name5.style.display = "block";
+
+            }
+
+            else {
+                window.addEventListener('scroll', change5);
+            }
+
+        }
+        window.addEventListener('scroll', change4);
+
+        function change5() {
+            if ((window.pageYOffset > 50) && (window.pageYOffset <= 60)) {
+                Opaque_Ring.style.strokeDasharray = "680,1000";
+                left.style.backgroundColor = "rgb(21, 56, 133)";
+                right.style.backgroundColor = "rgb(211, 202, 202)";
+                svg.style.backgroundColor = "rgb(21, 56, 133)";
+                element1.style.display = "none";
+                element2.style.display = "none";
+                element3.style.display = "none";
+                element4.style.display = "none";
+                element5.style.display = "none";
+                element7.style.display = "none";
+                element6.style.display = "block";
+                title1.style.display = "none";
+                title2.style.display = "none";
+                title3.style.display = "none";
+                title4.style.display = "none";
+                title5.style.display = "none";
+                title7.style.display = "none";
+                title6.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "none";
+                name1.style.display = "none";
+                name2.style.display = "none";
+                name3.style.display = "none";
+                name4.style.display = "none";
+                name5.style.display = "none";
+                name7.style.display = "none";
+                name6.style.display = "block";
+
+            }
+
+            else {
+                window.addEventListener('scroll', change6);
+            }
+
+        }
+        window.addEventListener('scroll', change5);
+
+        function change6() {
+            if ((window.pageYOffset > 60) && (window.pageYOffset <=70)) {
+                Opaque_Ring.style.strokeDasharray = "830,1000";
+                left.style.backgroundColor = "rgb(45, 136, 33)";
+                right.style.backgroundColor = "rgb(53, 173, 28)";
+                svg.style.backgroundColor = "rgb(45, 136, 33)";
+                element1.style.display = "none";
+                element2.style.display = "none";
+                element3.style.display = "none";
+                element4.style.display = "none";
+                element5.style.display = "none";
+                element6.style.display = "none";
+                element7.style.display = "block";
+                title1.style.display = "none";
+                title2.style.display = "none";
+                title3.style.display = "none";
+                title4.style.display = "none";
+                title5.style.display = "none";
+                title6.style.display = "none";
+                title7.style.display = "block";
+                box1.style.display = "none";
+                box2.style.display = "block";
+                name1.style.display = "none";
+                name2.style.display = "none";
+                name3.style.display = "none";
+                name4.style.display = "none";
+                name5.style.display = "none";
+                name6.style.display = "none";
+                name7.style.display = "block";
+
+            }
+
+            else {
+                window.addEventListener('scroll', change7);
+            }
+
+        }
+        window.addEventListener('scroll', change6);
+
+
+
+
+
+    </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ " crossorigin="anonymous "></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js " integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js " integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/ " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
